@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Route } from 'react-router-dom'
 import styled from 'styled-components'
 
-import Navbar from '../components/navbar'
+import { Navbar } from 'components'
 
 const Content = styled.div`
   margin: 0;

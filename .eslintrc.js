@@ -5,10 +5,6 @@ module.exports = {
     "jest": true,
     "browser": true
   },
-  "ecmaFeatures": {
-    "classes": true,
-    "jsx": true
-  },
   "plugins": [
     "import",
     "jsx-a11y"

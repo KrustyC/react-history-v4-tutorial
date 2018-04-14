@@ -1,12 +1,11 @@
 import React from 'react'
+import { P } from 'components'
 
 export default () => (
   <div>
-    <h1>
-      React Router <small className="label">v4</small>
-    </h1>
+    <h1>React Router v4 (tutorial)</h1>
     <section>
-      <p>
+      <P>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis ligula
         scelerisque, accumsan eros at, sodales nibh. Mauris nec tellus quis massa auctor
         pellentesque. Ut vitae leo sit amet nunc viverra pharetra. Ut sem diam, cursus sit amet
@@ -20,8 +19,7 @@ export default () => (
         Praesent fermentum ex sit amet eros placerat vestibulum. Suspendisse potenti. Pellentesque
         volutpat, enim eu dapibus commodo, risus orci placerat nibh, fringilla tempor urna nisl vel
         massa.
-      </p>
+      </P>
     </section>
-
   </div>
 )

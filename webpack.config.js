@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: [
@@ -36,12 +37,17 @@ module.exports = {
       {
         test: /\.(css|scss|sass|less)$/,
         loaders: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        loader: 'file-loader'
       }
     ]
   },
   resolve: {
     alias: {
-      Components: path.resolve(__dirname, 'src/views/components/')
+      components: path.resolve(__dirname, 'src/views/components/'),
+      images: path.resolve(__dirname, 'src/assets/images')
     },
     extensions: ['.js', '.jsx']
   },
@@ -49,6 +55,9 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: './src/index.html',
       filename: './index.html'
-    })
+    }),
+    new CopyWebpackPlugin([
+      { from: 'src/assets', to: 'assets' }
+    ])
   ]
 }

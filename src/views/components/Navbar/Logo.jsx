@@ -13,7 +13,7 @@ const Img = styled.img`
 
 export default () => (
   <Icon >
-    <Img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png"/>
+    <Img src="/assets/images/react-logo.png" />
   </Icon>
 )
 

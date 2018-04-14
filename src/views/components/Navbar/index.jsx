@@ -16,8 +16,8 @@ const Navbar = () => (
   <Header className="navbar">
     <section className="navbar-section">
       <Link to="/" className="btn btn-link">Home</Link>
-      <Link to="/history" className="btn btn-link">Dashboard</Link>
-      <Link to="/not-existing" className="btn btn-link">Not Existing</Link>
+      <Link to="/links" className="btn btn-link">Links</Link>
+      <Link to="/history" className="btn btn-link">History</Link>
     </section>
     <section className="navbar-center">
       <Logo />
