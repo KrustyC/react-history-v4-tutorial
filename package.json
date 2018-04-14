@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/KrustyC/react-history-v4-tutorial",
+  "homepage": "https://KrustyC.github.io/react-history-v4-tutorial",
   "author": "<davide.crestini94@gmail.com>",
   "license": "Apache-2.0",
   "scripts": {
@@ -45,6 +46,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "gh-pages": "^1.1.0",
     "history": "^4.7.2",
     "immutable": "^3.8.2",
     "lodash": "^4.17.5",
