@@ -23,7 +23,7 @@ module.exports = merge(common, {
     }),
     new webpack.DefinePlugin({
       'process.env': {
-        BASE_URL: JSON.stringify('react-history-v4-tutorial')
+        BASE_URL: JSON.stringify('/react-history-v4-tutorial')
       }
     })
   ]

@@ -1,15 +1,12 @@
 import React from 'react'
-import { Router } from 'react-router-dom'
-import { createBrowserHistory } from 'history'
+import { BrowserRouter } from 'react-router-dom'
 
 import AppRoutes from './routes'
 
-const history = createBrowserHistory()
-
 const App = () => (
-  <Router history={history} basename={process.env.BASE_URL}>
+  <BrowserRouter basename={process.env.BASE_URL}>
     <AppRoutes />
-  </Router>
+  </BrowserRouter>
 )
 
 export default App
