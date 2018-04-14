@@ -7,7 +7,7 @@ import AppRoutes from './routes'
 const history = createBrowserHistory()
 
 const App = () => (
-  <Router history={history}>
+  <Router history={history} basename={process.env.BASE_URL}>
     <AppRoutes />
   </Router>
 )

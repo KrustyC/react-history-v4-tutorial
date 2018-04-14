@@ -4,10 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
-    app: path.join(__dirname, '../src/app.js')
-  },
-  output: {
-    publicPath: '/'
+    vendor: ['react', 'react-dom', 'react-router-dom'],
+    index: path.join(__dirname, '../src/app.js')
   },
   module: {
     rules: [
@@ -41,10 +39,25 @@ module.exports = {
     },
     extensions: ['.js', '.jsx']
   },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendor',
+          chunks: 'all'
+        }
+      }
+    }
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, '../src/index.html'),
       filename: 'index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, '../src/404.html'),
+      filename: '404.html'
     }),
     new CopyWebpackPlugin([
       { from: path.join(__dirname, '../src/assets'), to: 'assets' }
