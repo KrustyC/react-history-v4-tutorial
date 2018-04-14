@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "webpack-dev-server --hot",
     "build": "webpack --mode production",
+    "deploy": "yarn build && gh-pages -d dist",
     "lint": "eslint src",
     "lint:fix": "./node_modules/.bin/eslint --fix src",
     "lint:css": "stylelint './src/**/*.jsx'"
