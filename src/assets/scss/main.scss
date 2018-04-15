@@ -1,0 +1,6 @@
+$primary-color: #ff6b81;
+$accent-color: #5352ed;
+$accent-color-dark: darken($accent-color, 3%) !default;
+
+/******************* LIB IMPORTS *****************/
+@import '~spectre.css/src/spectre.scss';

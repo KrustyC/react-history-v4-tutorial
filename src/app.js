@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import 'spectre.css/dist/spectre.min.css'
+import './assets/scss/main.scss'
 
 import App from './views/App'
 
