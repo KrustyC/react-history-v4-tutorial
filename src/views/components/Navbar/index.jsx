@@ -6,8 +6,8 @@ import Logo from './Logo'
 
 const Header = styled.header`
   height: 64px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 19%;
+  padding-right: 19%;
   background: white;
   border-bottom: 1px solid #ecf0f1;
 `
