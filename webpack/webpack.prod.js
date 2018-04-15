@@ -10,7 +10,7 @@ module.exports = merge(common, {
   output: {
     path: path.join(__dirname, '../dist'),
     filename: '[name].bundle.js',
-    publicPath: 'https://krustyc.github.io/react-history-v4-tutorial/'
+    publicPath: 'https://krustyc.github.io/react-router-v4-tutorial/'
   },
   plugins: [
     new UglifyJSPlugin({
@@ -23,7 +23,7 @@ module.exports = merge(common, {
     }),
     new webpack.DefinePlugin({
       'process.env': {
-        BASE_URL: JSON.stringify('/react-history-v4-tutorial')
+        BASE_URL: JSON.stringify('/react-router-v4-tutorial')
       }
     })
   ]
