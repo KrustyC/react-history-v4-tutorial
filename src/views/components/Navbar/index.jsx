@@ -23,7 +23,14 @@ const Navbar = () => (
       <Logo />
     </section>
     <section className="navbar-section">
-      <Link to="#" className="btn btn-primary">GitHub</Link>
+      <a
+        href="https://github.com/KrustyC/react-history-v4-tutorial"
+        className="btn btn-primary"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        GitHub
+      </a>
     </section>
   </Header>
 )

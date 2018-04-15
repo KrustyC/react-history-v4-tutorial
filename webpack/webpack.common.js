@@ -60,7 +60,7 @@ module.exports = {
       filename: '404.html'
     }),
     new CopyWebpackPlugin([
-      { from: path.join(__dirname, '../src/assets'), to: 'assets' }
+      { from: path.join(__dirname, '../src/assets'), to: './assets' }
     ])
   ]
 }

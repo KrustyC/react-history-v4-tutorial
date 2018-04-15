@@ -10,7 +10,7 @@ module.exports = merge(common, {
   output: {
     path: path.join(__dirname, '../dist'),
     filename: '[name].bundle.js',
-    publicPath: './'
+    publicPath: 'https://krustyc.github.io/react-history-v4-tutorial/'
   },
   plugins: [
     new UglifyJSPlugin({
