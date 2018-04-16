@@ -20,7 +20,7 @@ module.exports = {
     'jsx-a11y/media-has-caption': 0,
     'react/no-unescaped-entities': 0,
     'import/no-extraneous-dependencies': ['error', {
-      devDependencies: ['**/*/__tests__/**/*', '**/*/__mocks__/**/*', '**/webpack.*.config.js']
+      devDependencies: ['**/*/__tests__/**/*', '**/*/__mocks__/**/*', '**/webpack.*.js']
     }]
   },
   settings: {
