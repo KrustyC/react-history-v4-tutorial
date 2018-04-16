@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-// Needed to use Link below :)
-const StyledLink = styled(Link)``
+const MainContainer = styled.div`
+  min-height: '100vh';
+`
 
 const LinksContainer = styled.div`
   button {
@@ -22,4 +22,4 @@ const LinksContainer = styled.div`
   }
 `
 
-export default LinksContainer
+export { MainContainer, LinksContainer }

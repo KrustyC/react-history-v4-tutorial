@@ -35,7 +35,9 @@ module.exports = {
   resolve: {
     alias: {
       components: path.join(__dirname, '../src/views/components/'),
-      images: path.join(__dirname, '../src/assets/images')
+      services: path.join(__dirname, '../src/services/'),
+      'routes-templates': path.join(__dirname, '../src/views/routes-templates/'),
+      layouts: path.join(__dirname, '../src/views/layouts/')
     },
     extensions: ['.js', '.jsx']
   },
