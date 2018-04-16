@@ -1,12 +1,13 @@
 import React from 'react'
 import { Switch } from 'react-router-dom'
 
+import { DefaultLayout } from 'layouts'
+import { PublicRoute } from 'routes-templates'
+
 import Home from './home'
 import History from './history'
 import Links from './links'
 
-import { DefaultLayout } from 'layouts'
-import { PublicRoute } from 'routes-templates'
 
 export default () => (
   <Switch>

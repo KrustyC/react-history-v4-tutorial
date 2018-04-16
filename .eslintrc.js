@@ -1,22 +1,33 @@
 module.exports = {
-  "extends": "airbnb",
-  "parser": "babel-eslint",
-  "env": {
-    "jest": true,
-    "browser": true
+  extends: 'airbnb',
+  env: {
+    browser: true,
+    jest: true
   },
-  "plugins": [
-    "import",
-    "jsx-a11y"
+  plugins: [
+    'react',
+    'jsx-a11y',
+    'import'
   ],
-  "rules": {
-    "comma-dangle": ["error", "never"],
-    "semi": [ "error", "never" ],
-    "no-underscore-dangle": "off",
-    "class-methods-use-this": 0,
-    "generator-star-spacing": "off",
-    "react/jsx-curly-spacing": [2, "never"],
-    "global-require": 0,
-    "import/no-extraneous-dependencies": 0
+  parser: 'babel-eslint',
+  rules: {
+    'comma-dangle': ['error', 'never'],
+    semi: ['error', 'never'],
+    'no-underscore-dangle': 'off',
+    'class-methods-use-this': 0,
+    'react/forbid-prop-types': ['off', { forbid: [] }],
+    'global-require': 0,
+    'jsx-a11y/media-has-caption': 0,
+    'react/no-unescaped-entities': 0,
+    'import/no-extraneous-dependencies': ['error', {
+      devDependencies: ['**/*/__tests__/**/*', '**/*/__mocks__/**/*', '**/webpack.*.config.js']
+    }]
+  },
+  settings: {
+    'import/resolver': {
+      webpack: {
+        config: 'webpack/webpack.common.js'
+      }
+    }
   }
 }

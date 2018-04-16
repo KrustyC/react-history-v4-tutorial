@@ -10,8 +10,8 @@
     "dev": "webpack-dev-server --hot --mode development --config webpack/webpack.dev.js",
     "build": "webpack --mode production --config webpack/webpack.prod.js",
     "deploy": "yarn build && gh-pages -d dist",
-    "lint": "eslint src",
-    "lint:fix": "./node_modules/.bin/eslint --fix src",
+    "lint": "eslint './src/**/*.js*'",
+    "lint:fix": "./node_modules/.bin/eslint --fix './src/**/*.js*'",
     "lint:css": "stylelint './src/**/*.jsx'"
   },
   "devDependencies": {
@@ -33,6 +33,7 @@
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^15.0.2",
     "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-import-resolver-webpack": "^0.9.0",
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.7.0",
