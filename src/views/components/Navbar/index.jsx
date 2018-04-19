@@ -16,8 +16,8 @@ const Navbar = () => (
   <Header className="navbar">
     <section className="navbar-section">
       <Link to="/" className="btn btn-link">Home</Link>
-      <Link to="/links" className="btn btn-link">Links</Link>
-      <Link to="/history" className="btn btn-link">History</Link>
+      <Link to="/basic" className="btn btn-link">Basic</Link>
+      <Link to="/auth" className="btn btn-link">Auth</Link>
     </section>
     <section className="navbar-center">
       <Logo />

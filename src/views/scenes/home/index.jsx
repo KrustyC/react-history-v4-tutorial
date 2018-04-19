@@ -1,8 +1,9 @@
 import React from 'react'
 import { P } from 'components'
+import { DefaultLayout } from 'layouts'
 
 export default () => (
-  <div>
+  <DefaultLayout>
     <h1>React Router v4 (tutorial)</h1>
     <section>
       <P>
@@ -21,5 +22,5 @@ export default () => (
         massa.
       </P>
     </section>
-  </div>
+  </DefaultLayout>
 )

@@ -1,10 +1,20 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import { switchProp } from 'styled-tools'
 
 const MainContainer = styled.div`
   min-height: '100vh';
 `
 
 const LinksContainer = styled.div`
+  display: flex;
+
+  ${switchProp('align', {
+    center: css`
+      justify-content: center;
+      align-items: center;
+    `
+  })}
+
   button {
     margin-left: 20px;
   }

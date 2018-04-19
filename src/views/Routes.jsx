@@ -1,16 +1,17 @@
 import React from 'react'
-import { Switch } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 
-import { PublicRoute } from 'routes-templates'
-import { EmptyLayout } from 'layouts'
-
-import BasicRoutes from './scenes/basic'
+import Home from './scenes/home'
+import Basic from './scenes/basic'
+import Auth from './scenes/auth'
 import NotFound from './scenes/not-found'
 
 const AppRoutes = () => (
   <Switch>
-    <BasicRoutes />
-    <PublicRoute layout={EmptyLayout} component={NotFound} />
+    <Route exact path="/" component={Home} />
+    <Route path="/basic" component={Basic} />
+    <Route path="/auth" component={Auth} />
+    <Route path="*" component={NotFound} />
   </Switch>
 )
 
