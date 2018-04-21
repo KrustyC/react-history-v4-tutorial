@@ -27,11 +27,7 @@ const DefaultLayout = ({ children }) => (
 )
 
 DefaultLayout.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.func,
-    PropTypes.array,
-    PropTypes.instanceOf(React.Component)
-  ]).isRequired
+  children: PropTypes.any.isRequired
 }
 
 export default DefaultLayout

@@ -3,27 +3,27 @@ import PropTypes from 'prop-types'
 import { Route, Redirect } from 'react-router-dom'
 import { authService } from 'services'
 
-const PrivateRoute = ({ component: ViewComponent, ...rest }) => (
+const UnauthenticatedRoute = ({ component: ViewComponent, ...rest }) => (
   <Route
     {...rest}
     render={props => (
-      authService.isAuthenticated ? (
+      !authService.isAuthenticated ? (
         <ViewComponent {...props} />
       ) : (
-        <Redirect to={{ pathname: '/auth/login', state: { from: props.location } }} />
+        <Redirect to={{ pathname: '/', state: { from: props.location } }} />
       )
     )
     }
   />
 )
 
-PrivateRoute.propTypes = {
+UnauthenticatedRoute.propTypes = {
   component: PropTypes.any.isRequired,
   location: PropTypes.object
 }
 
-PrivateRoute.defaultProps = {
+UnauthenticatedRoute.defaultProps = {
   location: {}
 }
 
-export default PrivateRoute
+export default UnauthenticatedRoute

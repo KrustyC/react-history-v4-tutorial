@@ -4,8 +4,6 @@ import PropTypes from 'prop-types'
 import { P, LinksContainer, Highlights, Divider } from 'components'
 import { goBackSnippet, navigateSnippet } from './snippets'
 
-console.log(Divider)
-
 export default class History extends Component {
   static propTypes = {
     history: PropTypes.shape({

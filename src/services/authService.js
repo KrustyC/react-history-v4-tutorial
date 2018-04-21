@@ -1,13 +1,15 @@
-const fakeAuth = {
+const authService = {
   isAuthenticated: false,
-  authenticate(cb) {
+  login() {
     this.isAuthenticated = true
-    setTimeout(cb, 100) // fake async
+    return new Promise((resolve) => {
+      setTimeout(() => resolve(), 100)
+    })
   },
   signout(cb) {
     this.isAuthenticated = false
-    setTimeout(cb, 100) // fake async
+    setTimeout(cb, 100)
   }
 }
 
-export default fakeAuth
+export default authService
