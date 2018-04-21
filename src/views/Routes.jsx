@@ -1,6 +1,6 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import { PrivateRoute, UnauthenticatedRoute } from 'routes-templates'
+import { PrivateRoute } from 'routes-templates'
 
 import Auth from './scenes/auth'
 import Basic from './scenes/basic'
@@ -13,7 +13,7 @@ const AppRoutes = () => (
     <Route exact path="/" component={Home} />
     <Route path="/basic" component={Basic} />
     <PrivateRoute path="/private" component={Private} />
-    <UnauthenticatedRoute path="/auth" component={Auth} />
+    <Route path="/auth" component={Auth} />
     <Route path="*" component={NotFound} />
   </Switch>
 )

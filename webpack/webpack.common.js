@@ -35,9 +35,9 @@ module.exports = {
   resolve: {
     alias: {
       components: path.join(__dirname, '../src/views/components/'),
-      services: path.join(__dirname, '../src/services/'),
       'routes-templates': path.join(__dirname, '../src/views/routes-templates/'),
-      layouts: path.join(__dirname, '../src/views/layouts/')
+      layouts: path.join(__dirname, '../src/views/layouts/'),
+      contexts: path.join(__dirname, '../src/views/contexts/')
     },
     extensions: ['.js', '.jsx']
   },

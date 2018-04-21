@@ -1,4 +1,4 @@
 import PrivateRoute from './PrivateRoute'
-import UnauthenticatedRoute from './UnauthenticatedRoute'
 
-export { PrivateRoute, UnauthenticatedRoute }
+// eslint-disable-next-line
+export { PrivateRoute }

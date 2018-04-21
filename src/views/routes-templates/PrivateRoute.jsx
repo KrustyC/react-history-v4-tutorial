@@ -1,17 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Route, Redirect } from 'react-router-dom'
-import { authService } from 'services'
+import { AuthConsumer } from 'contexts'
 
 const PrivateRoute = ({ component: ViewComponent, ...rest }) => (
   <Route
     {...rest}
     render={props => (
-      authService.isAuthenticated ? (
-        <ViewComponent {...props} />
-      ) : (
-        <Redirect to={{ pathname: '/auth/login', state: { from: props.location } }} />
-      )
+      <AuthConsumer>
+        {({ isAuthenticated }) => (
+          isAuthenticated ? (
+            <ViewComponent {...props} />
+          ) : (
+            <Redirect to={{ pathname: '/auth/login', state: { from: props.location } }} />
+          )
+        )}
+      </AuthConsumer>
     )
     }
   />
