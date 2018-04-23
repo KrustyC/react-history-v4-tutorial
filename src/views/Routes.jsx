@@ -1,6 +1,5 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import { PrivateRoute } from 'routes-templates'
 
 import Home from './scenes/home'
 import Docs from './scenes/docs'
