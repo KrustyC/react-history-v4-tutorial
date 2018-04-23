@@ -4,7 +4,7 @@ import { DefaultLayout } from 'layouts'
 
 export default () => (
   <DefaultLayout>
-    <h1>React Router v4 (tutorial)</h1>
+    <h1>React Router v4 <code>Tutorial</code></h1>
     <section>
       <P>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis ligula

@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import Logo from './Logo'
+import Dropdown from './Dropdown'
 
 
 const Header = styled.header`
@@ -16,8 +17,11 @@ const Navbar = () => (
   <Header className="navbar">
     <section className="navbar-section">
       <Link to="/" className="btn btn-link">Home</Link>
-      <Link to="/basic" className="btn btn-link">Basic</Link>
-      <Link to="/auth" className="btn btn-link">Auth</Link>
+      <Dropdown>
+        <Link to="/docs/auth" className="btn btn-link">Auth Routes</Link>
+        <Link to="/docs/basic" className="btn btn-link">Links & History</Link>
+        <Link to="/docs/nested" className="btn btn-link">Nested Routes</Link>
+      </Dropdown>
     </section>
     <section className="navbar-center">
       <Logo />
